@@ -29,8 +29,8 @@ namespace Kamen_Skarje_Papir
 
             static public int GetState()
             {
-                int randomizor = rand.Next(0, 2); //0,1,2
-                MessageBox.Show(Convert.ToString(randomizor));
+                int randomizor = rand.Next(0, 3); //0,1,2
+                //MessageBox.Show(Convert.ToString(randomizor));
                 return randomizor;
             }
         }
@@ -105,7 +105,7 @@ namespace Kamen_Skarje_Papir
         
         public void ShowPictures()
         {
-            MessageBox.Show(Convert.ToString(igra.P1State) + " : " + Convert.ToString(igra.P2State));
+            //MessageBox.Show(Convert.ToString(igra.P1State) + " : " + Convert.ToString(igra.P2State));
             switch (igra.P1State)
             {
                 case rock:
@@ -136,7 +136,7 @@ namespace Kamen_Skarje_Papir
         {
             if (igra.Play() == 1)
             {
-                MessageBox.Show("Winner: player 1.");
+                //MessageBox.Show("Winner: player 1.");
                 igra.P1Score++;
                 if (igra.P1Score > Game.P1HScore)
                 {
@@ -147,7 +147,7 @@ namespace Kamen_Skarje_Papir
             }
             else if (igra.Play() == 2)
             {
-                MessageBox.Show("Winner: player 2.");
+                //MessageBox.Show("Winner: player 2.");
                 igra.P2Score++;
                 if (igra.P2Score > Game.P2HScore)
                 {
@@ -158,7 +158,7 @@ namespace Kamen_Skarje_Papir
             }
             else
             {
-                MessageBox.Show("DRAW");
+                //MessageBox.Show("DRAW");
             }
             ShowPictures();
         }

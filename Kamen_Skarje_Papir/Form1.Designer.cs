@@ -67,36 +67,36 @@
             this.player1_score.AutoSize = true;
             this.player1_score.Location = new System.Drawing.Point(86, 9);
             this.player1_score.Name = "player1_score";
-            this.player1_score.Size = new System.Drawing.Size(56, 17);
+            this.player1_score.Size = new System.Drawing.Size(16, 17);
             this.player1_score.TabIndex = 2;
-            this.player1_score.Text = "SCORE";
+            this.player1_score.Text = "0";
             // 
             // player2_score
             // 
             this.player2_score.AutoSize = true;
             this.player2_score.Location = new System.Drawing.Point(309, 9);
             this.player2_score.Name = "player2_score";
-            this.player2_score.Size = new System.Drawing.Size(56, 17);
+            this.player2_score.Size = new System.Drawing.Size(16, 17);
             this.player2_score.TabIndex = 3;
-            this.player2_score.Text = "SCORE";
+            this.player2_score.Text = "0";
             // 
             // player2_highscore
             // 
             this.player2_highscore.AutoSize = true;
             this.player2_highscore.Location = new System.Drawing.Point(366, 263);
             this.player2_highscore.Name = "player2_highscore";
-            this.player2_highscore.Size = new System.Drawing.Size(56, 17);
+            this.player2_highscore.Size = new System.Drawing.Size(16, 17);
             this.player2_highscore.TabIndex = 7;
-            this.player2_highscore.Text = "SCORE";
+            this.player2_highscore.Text = "0";
             // 
             // player1_highscore
             // 
             this.player1_highscore.AutoSize = true;
             this.player1_highscore.Location = new System.Drawing.Point(154, 263);
             this.player1_highscore.Name = "player1_highscore";
-            this.player1_highscore.Size = new System.Drawing.Size(56, 17);
+            this.player1_highscore.Size = new System.Drawing.Size(16, 17);
             this.player1_highscore.TabIndex = 6;
-            this.player1_highscore.Text = "SCORE";
+            this.player1_highscore.Text = "0";
             // 
             // label8
             // 
@@ -118,7 +118,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Kamen_Skarje_Papir.Properties.Resources.kamen;
             this.pictureBox1.Location = new System.Drawing.Point(16, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 165);
@@ -128,7 +127,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Kamen_Skarje_Papir.Properties.Resources.kamen;
             this.pictureBox2.Location = new System.Drawing.Point(227, 33);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(205, 165);
