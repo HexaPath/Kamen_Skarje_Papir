@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace Kamen_Skarje_Papir
 {
+
+
     public partial class KamenSkarjePapir : Form
     {
         public KamenSkarjePapir()
@@ -48,7 +50,7 @@ namespace Kamen_Skarje_Papir
                 P1State = HelperClass.GetState();
                 P2State = HelperClass.GetState();
                 
-                /*NEEDS ADJUSTMENTS*/
+                /*NEEDS ADJUSTMENTS 'CUZ DAMN THING DON'T WORK*/
                 if(P1State == rock)
                 {
                     if(P2State == scissors)
@@ -133,37 +135,27 @@ namespace Kamen_Skarje_Papir
 
         private void PlayBtn_Click(object sender, EventArgs e)
         {
-            if (igra.Play() == 1)
+            switch(igra.Play())
             {
-                //MessageBox.Show("Winner: player 1.");
-                igra.P1Score++;
-                if (igra.P1Score > Game.P1HScore)
-                {
-                    Game.P1HScore = igra.P1Score;
-                }
+                case 1:
+                    igra.P1Score++;
+                    if (igra.P1Score > Game.P1HScore)
+                    {
+                        Game.P1HScore = igra.P1Score;
+                    }
+                    break;
+                case 2:
+                    igra.P2Score++;
+                    if (igra.P2Score > Game.P2HScore)
+                    {
+                        Game.P2HScore = igra.P2Score;
+                    }
+                    break;
+                case 3:
+                    /*DRAW*/
+                    break;
             }
-
-            else if (igra.Play() == 2)
-            {
-                //MessageBox.Show("Winner: player 2.");
-                igra.P2Score++;
-                if (igra.P2Score > Game.P2HScore)
-                {
-                    Game.P2HScore = igra.P2Score;
-                }
-            }
-            else if (igra.Play() == 0)
-            {
-                MessageBox.Show("ERROR");
-            }
-
-            else if (igra.Play() == 3) {/*DRAW*/ }
-
-            else
-            {
-                MessageBox.Show(Convert.ToString(igra.Play()));
-                MessageBox.Show("Dafak, ne vem zaka nebi blo kej od tega");
-            }
+            
             updater();
         }
 
