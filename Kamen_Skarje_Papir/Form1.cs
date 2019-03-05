@@ -30,7 +30,6 @@ namespace Kamen_Skarje_Papir
             static public int GetState()
             {
                 int randomizor = rand.Next(0, 3); //0,1,2
-                //MessageBox.Show(Convert.ToString(randomizor));
                 return randomizor;
             }
         }
@@ -60,9 +59,9 @@ namespace Kamen_Skarje_Papir
                     {
                         return 2;
                     }
-                    else
+                    else 
                     {
-                        return 0;
+                        return 3;
                     }
                 }
                 else if(P1State == scissors)
@@ -77,7 +76,7 @@ namespace Kamen_Skarje_Papir
                     }
                     else
                     {
-                        return 0;
+                        return 3;
                     }
                 }
                 else if(P1State == paper)
@@ -92,7 +91,7 @@ namespace Kamen_Skarje_Papir
                     }
                     else
                     {
-                        return 0;
+                        return 3;
                     }
                 }
                 else
@@ -141,10 +140,9 @@ namespace Kamen_Skarje_Papir
                 if (igra.P1Score > Game.P1HScore)
                 {
                     Game.P1HScore = igra.P1Score;
-                    player1_highscore.Text = Convert.ToString(Game.P1HScore);
                 }
-                player1_score.Text = Convert.ToString(igra.P1Score);
             }
+
             else if (igra.Play() == 2)
             {
                 //MessageBox.Show("Winner: player 2.");
@@ -152,14 +150,29 @@ namespace Kamen_Skarje_Papir
                 if (igra.P2Score > Game.P2HScore)
                 {
                     Game.P2HScore = igra.P2Score;
-                    player2_highscore.Text = Convert.ToString(Game.P2HScore);
                 }
-                player2_score.Text = Convert.ToString(igra.P2Score);
             }
+            else if (igra.Play() == 0)
+            {
+                MessageBox.Show("ERROR");
+            }
+
+            else if (igra.Play() == 3) {/*DRAW*/ }
+
             else
             {
-                //MessageBox.Show("DRAW");
+                MessageBox.Show(Convert.ToString(igra.Play()));
+                MessageBox.Show("Dafak, ne vem zaka nebi blo kej od tega");
             }
+            updater();
+        }
+
+        private void updater()
+        { 
+            player2_highscore.Text = Convert.ToString(Game.P2HScore);
+            player1_highscore.Text = Convert.ToString(Game.P1HScore);
+            player1_score.Text = Convert.ToString(igra.P1Score);
+            player2_score.Text = Convert.ToString(igra.P2Score);
             ShowPictures();
         }
 
