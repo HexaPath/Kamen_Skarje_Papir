@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace Kamen_Skarje_Papir
 {
-
-
+    
     public partial class KamenSkarjePapir : Form
     {
         public KamenSkarjePapir()
@@ -25,16 +24,7 @@ namespace Kamen_Skarje_Papir
 
         Game igra = new Game();
 
-        public class HelperClass
-        {
-            static Random rand = new Random();
-
-            static public int GetState()
-            {
-                int randomizor = rand.Next(0, 3); //0,1,2
-                return randomizor;
-            }
-        }
+        
 
         public class Game
         {
@@ -106,7 +96,6 @@ namespace Kamen_Skarje_Papir
         
         public void ShowPictures()
         {
-            //MessageBox.Show(Convert.ToString(igra.P1State) + " : " + Convert.ToString(igra.P2State));
             switch (igra.P1State)
             {
                 case rock:
@@ -155,7 +144,6 @@ namespace Kamen_Skarje_Papir
                     /*DRAW*/
                     break;
             }
-            
             updater();
         }
 
