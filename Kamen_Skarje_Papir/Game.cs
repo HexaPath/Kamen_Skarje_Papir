@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kamen_Skarje_Papir
+﻿namespace Kamen_Skarje_Papir
 {
     public class Game
     {
