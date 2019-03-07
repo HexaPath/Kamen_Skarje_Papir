@@ -23,47 +23,74 @@ namespace Kamen_Skarje_Papir
             /*NEEDS ADJUSTMENTS 'CUZ DAMN THING DON'T WORK*/
             if (P1State == 0)
             {
-                if (P2State == 1)
+                switch (P2State)
                 {
-                    return 1;
-                }
-                else if (P2State == 2)
-                {
-                    return 2;
-                }
-                else
-                {
-                    return 3;
+                    case 0:
+                        return 3;
+                    case 1:
+                        P1Score++;
+                        if (P1Score > P1HScore)
+                        {
+                            P1HScore = P1Score;
+                        }
+                        return 1;
+                    case 2:
+                        P2Score++;
+                        if (P2Score > P2HScore)
+                        {
+                            P2HScore = P2Score;
+                        }
+                        return 2;
+                    default:
+                        return 0;
                 }
             }
             else if (P1State == 1)
             {
-                if (P2State == 0)
+                switch (P2State)
                 {
-                    return 2;
-                }
-                else if (P2State == 2)
-                {
-                    return 1;
-                }
-                else
-                {
-                    return 3;
+                    case 0:
+                        P2Score++;
+                        if (P2Score > P2HScore)
+                        {
+                            P2HScore = P2Score;
+                        }
+                        return 2;
+                    case 1:
+                        return 3;
+                    case 2:
+                        P1Score++;
+                        if (P1Score > P1HScore)
+                        {
+                            P1HScore = P1Score;
+                        }
+                        return 1;
+                    default:
+                        return 0;
                 }
             }
             else if (P1State == 2)
             {
-                if (P2State == 0)
+                switch (P2State)
                 {
-                    return 1;
-                }
-                else if (P2State == 1)
-                {
-                    return 2;
-                }
-                else
-                {
-                    return 3;
+                    case 0:
+                        P1Score++;
+                        if (P1Score > P1HScore)
+                        {
+                            P1HScore = P1Score;
+                        }
+                        return 1;
+                    case 1:
+                        P2Score++;
+                        if (P2Score > P2HScore)
+                        {
+                            P2HScore = P2Score;
+                        }
+                        return 2;
+                    case 2:
+                        return 3;
+                    default:
+                        return 0;
                 }
             }
             else
@@ -72,4 +99,5 @@ namespace Kamen_Skarje_Papir
             }
         }
     }
+
 }
